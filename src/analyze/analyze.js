@@ -1,4 +1,5 @@
- process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\\channing\\8base\\backend_uhack\\src\\analyze\\gcloud_janus_auth.json";
+//  process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\\channing\\8base\\backend_uhack\\src\\analyze\\gcloud_janus_auth.json";
+ process.env.GOOGLE_APPLICATION_CREDENTIALS = "./src/analyze/gcloud_janus_auth.json";
 // console.log(`${GOOGLE_APPLICATION_CREDENTIALS}`);
 
 //Import GCloud library
