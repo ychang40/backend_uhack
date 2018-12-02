@@ -4,9 +4,4 @@ functions:
       code: src/queryRoute.js
     type: resolver
     schema: src/queryRoute.graphql
-  testEndpoint:
-    handler:
-      code: src/testEndpoint.js
-    type: webhook
-    path: test
-    method: post
+ 

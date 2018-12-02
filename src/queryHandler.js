@@ -15,10 +15,19 @@ module.exports = async (QUERY_STRING = "") => {
     var scores;
     var magnitudes;
     var dict = {};
+    var cnt = 0;
+
+    console.log(tweet.text);
   
 
     //Send result to GCloud
-    var results = await GCloud.analyzeText(tweet.text);
+
+    try {
+      var results = await GCloud.analyzeText(tweet.text);
+    } catch (err) {
+      console.log(`${err.message} happened`)
+      continue;
+    }
 
         var entities = [];
         var entities_salience = [];
@@ -41,8 +50,10 @@ module.exports = async (QUERY_STRING = "") => {
         dict.score = results[0].documentSentiment.score;
         dict.magnitude = results[0].documentSentiment.magnitude;
 
+        console.log(dict)
+
         jsons.push(JSON.stringify(dict));
-        // cnt = cnt + 1;
+        cnt = cnt + 1;
         //console.log('Text: ${text}');
         //console.log('Sentiment score: ${sentiment.score}');
         //console.log('Sentiment magnitude: ${sentiment.magnitude}');
