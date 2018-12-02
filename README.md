@@ -3,12 +3,8 @@ This is the back end of our 2018 UHACK application. For access to the front end 
 
 UHack 2018 Team Members:
 
-Channing Chang - ychang40@umiami.edu
-
+Channing Chang - ychang40@umiami.edu (@ychang40)
 Mario Ricart - mricart88@gmail.com
-
-Siobhan Williams - vonnie2k5@gmail.com
-
-Ibrahim Kaya - ixk133@miami.edu
-
-Jenelle Cranston - jvc48@miami.edu
+Siobhan Williams - s.williams17@umiami.edu (@shiolovesgod)
+Ibrahim Kaya - ixk133@miami.edu 
+Jenelle Cranston - jvc48@miami.edu (@jenelle)
