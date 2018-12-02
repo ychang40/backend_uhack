@@ -9,6 +9,7 @@ var GQ = require('./queryHandler');
 var qRoute = require('./queryRoute');
 
 var results = qRoute({}).then(res=> {
+  var output = res;
   console.log(res)
 }).catch(err => {
   console.log("NOOOOO!")
