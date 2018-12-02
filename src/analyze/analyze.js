@@ -1,4 +1,4 @@
- process.env.GOOGLE_APPLICATION_CREDENTIALS = "./src/analyze/gcloud_janus_auth.json";
+ process.env.GOOGLE_APPLICATION_CREDENTIALS = "/src/analyze/gcloud_janus_auth.json";
 
 //Import GCloud library
 const language = require('@google-cloud/language');
