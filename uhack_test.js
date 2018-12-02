@@ -17,23 +17,22 @@ var client = new Twitter({
 
 fs.writeFile("test.json","",function (err){});
 
-client.get('search/tweets', {q: args.search}, function(error, tweets, response) {
+
+
+var t=client.get('search/tweets', {q: args.search}, function(error, tweets, response) {
    
    
    for (var i = 0; i < tweets.statuses.length	; i++) {
 	   
 	   fs.appendFile("test.json", JSON.stringify(tweets.statuses[i]), function(err) {
-    if(err) {
-        return console.log(err);
-    }
 
-    //console.log("The file was saved!");
 }); 
-	//console.log(tweets.statuses[i].text);
+	
    }
 
-   
+   return tweets
 });
 
+return t;
 //return JSON.stringify(tweets.statuses[i]);
 
