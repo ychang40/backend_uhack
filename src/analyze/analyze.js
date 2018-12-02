@@ -1,4 +1,4 @@
- process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\\Siobhan\\Documents\\Continued Ed\\UHack 2018\\backend_uhack\\src\\analyze\\gcloud_janus_auth.json";
+ process.env.GOOGLE_APPLICATION_CREDENTIALS = "C:\\Users\\channing\\8base\\backend_uhack\\src\\analyze\\gcloud_janus_auth.json";
 // console.log(`${GOOGLE_APPLICATION_CREDENTIALS}`);
 
 //Import GCloud library
@@ -13,9 +13,15 @@ module.exports = {
       content: inputString,
       type: 'PLAIN_TEXT',
     };
-    
+
+    const features = {
+        extractSyntax:true,
+        extractEntities:true,
+        extractDocumentSentiment:true,
+      };
+
     // Detects the sentiment of the text
-    return client.analyzeSentiment({document: document});
+    return client.annotateText({document: document, features: features});
       
   }
 

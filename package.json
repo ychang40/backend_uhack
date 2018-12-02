@@ -3,18 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "uhack.js",
-<<<<<<< HEAD
   "dependencies": {
+    "@google-cloud/language": "^2.0.0",
     "yargs": "^12.0.5"
   },
   "devDependencies": {},
-=======
-  "dependencies": {},
-  "devDependencies": {
-    "@google-cloud/language": "^2.0.0",
-    "twitter": "^1.7.1"
-  },
->>>>>>> bb6d4ed1069987d2f0f9fb35197d387e2e41217d
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
