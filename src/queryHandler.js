@@ -5,13 +5,13 @@ const gCloud = require('./analyze/analyze.js');
 
 //Get the tweets from a query
 var tweetsPromised = TwitterSearch(QUERY_STRING);
-
+var count = 0;
 //Use the tweets to Search GCloud
 tweetsPromised.then(tweets => {
 
   console.log("I've got the tweets");
 
-  for (let tweet of tweets.statuses) {
+  for (var tweet of tweets.statuses) {
 
     //Send result to GCloud
     gCloud.analyzeText(tweet.text).then(results => {
@@ -19,7 +19,7 @@ tweetsPromised.then(tweets => {
         //SAMPLE CODE FOR ANALYSIS
         const sentiment = results[0].documentSentiment;
 
-        console.log(`Text: ${text}`);
+        console.log(`Text: ${tweet.text}`);
         console.log(`Sentiment score: ${sentiment.score}`);
         console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
       })
@@ -27,5 +27,6 @@ tweetsPromised.then(tweets => {
         console.error('ERROR:', err);
       });
 
+      console.log(`Count = ${count++}`)
   }
 });

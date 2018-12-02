@@ -1,0 +1,13 @@
+functions:
+  submitQuery:
+    handler:
+      code: src/queryHandler.js
+    type: webhook
+    path: query
+    method: post
+  testEndpoint:
+    handler:
+      code: src/testEndpoint.js
+    type: webhook
+    path: test
+    method: post
