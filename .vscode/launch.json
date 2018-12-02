@@ -7,7 +7,7 @@
       "type": "node",
       "request": "launch",
       "name": "Twitter",
-      "program": "${workspaceFolder}\\src\\queryHandler.js"
+      "program": "${workspaceFolder}\\src\\testEndpoint.js"
 
     },
 

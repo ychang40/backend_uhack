@@ -1,10 +1,9 @@
 functions:
-  submitQuery:
+  queryRoute:
     handler:
-      code: src/queryHandler.js
-    type: webhook
-    path: query
-    method: post
+      code: src/queryRoute.js
+    type: resolver
+    schema: src/queryRoute.graphql
   testEndpoint:
     handler:
       code: src/testEndpoint.js

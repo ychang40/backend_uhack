@@ -1,0 +1,8 @@
+type queryRouteResult {
+  searchString: String
+  searchResult: String
+}
+
+extend type Query {
+  queryRoute (searchString: String): queryRouteResult
+}
